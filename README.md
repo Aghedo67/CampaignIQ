@@ -113,12 +113,3 @@ streamlit run app.py
 
 [Hillstrom Email Marketing Dataset](http://www.minethatdata.com/Kevin_Hillstrom_MineThatData_E-MailAnalytics_DataMiningChallenge_2008.03.20.csv) — 64,000 customers across a randomised A/B/C email campaign, published by Kevin Hillstrom (former VP Analytics at Amazon and Netflix) as an open benchmark challenge in 2008. Widely used in the causal inference and uplift modeling literature.
 
----
-
-## Key Interview Talking Points
-
-- **Why uplift modeling over response modeling?** Response models predict who will convert. Uplift models predict who will convert *because of the campaign*. Targeting Sure Things (customers who buy regardless) wastes spend without generating incremental revenue.
-- **How did you validate the experiment?** Randomisation balance check using chi-square and ANOVA across all pre-treatment features before any lift analysis — if groups were imbalanced, every downstream number would be invalid.
-- **What is AUUC?** Area Under the Uplift Curve — the uplift equivalent of AUC-ROC. Measures how much better the model ranks Persuadables above other customers compared to random targeting.
-- **What are Sleeping Dogs?** Customers whose conversion probability is *lower* when treated — the campaign actively hurts their conversion. A naive response model would never identify these; an uplift model flags them for suppression.
-- **How do you find the optimal targeting threshold?** Marginal ROI: keep adding customers to the target list while marginal incremental revenue exceeds cost per outreach. This gives the profit-maximising threshold without arbitrary decile cutoffs.
