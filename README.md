@@ -74,7 +74,7 @@ CampaignIQ/
 
 ## Live Dashboard
 
-*(Link added after Streamlit deployment)*
+*(https://campaigniq-aefkwuvwviqmygntpay3fc.streamlit.app/)*
 
 ---
 
